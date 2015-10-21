@@ -75,9 +75,6 @@ void draw() {
     fill(255,0,0);
     rect(30,24,blood,20);
     blood = 2*life;
-    if(life >= 100){
-      life = 100;
-    }
     image(hp,20,20);
     
     image(treasure,treasureX,treasureY);
@@ -138,6 +135,9 @@ void draw() {
         life += 10;
         treasureX = floor(random(20,600));
         treasureY = floor(random(20,460));
+        if(life >= 100){
+          life = 100;
+        }
       }
     }
     break;
