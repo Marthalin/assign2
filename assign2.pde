@@ -40,7 +40,7 @@ void setup () {
   fighterX = 580;
   fighterY = 240;
   treasureX = floor(random(20,590));
-  treasureY = floor(random(20,460));
+  treasureY = floor(random(40,460));
   blood = 200;
   life = TOTAL_LIFE;
   gameState = GAME_START;
@@ -133,8 +133,8 @@ void draw() {
     if(fighterX >= treasureX-treasure.width && fighterX <= treasureX+treasure.width){
       if(fighterY >= treasureY-treasure.height && fighterY <= treasureY+treasure.height ){
         life += 10;
-        treasureX = floor(random(20,600));
-        treasureY = floor(random(20,460));
+        treasureX = floor(random(20,590));
+        treasureY = floor(random(40,460));
         if(life >= 100){
           life = 100;
         }
@@ -150,6 +150,8 @@ void draw() {
       if(mousePressed){
         gameState = GAME_RUN;
         life = TOTAL_LIFE;
+        fighterX = 580;
+        fighterY = 240;
       }else{
         image(end1,0,0);
       }
