@@ -41,8 +41,8 @@ void setup () {
   fighterY = 240;
   treasureX = floor(random(20,590));
   treasureY = floor(random(40,460));
-  blood = 200;
-  life = TOTAL_LIFE;
+  blood = 40;
+  life = 20;
   gameState = GAME_START;
 }
 
@@ -149,7 +149,7 @@ void draw() {
     if(mouseX > 200 && mouseX <440 && mouseY >300 && mouseY < 360){
       if(mousePressed){
         gameState = GAME_RUN;
-        life = TOTAL_LIFE;
+        life = 20;
         fighterX = 580;
         fighterY = 240;
       }else{
